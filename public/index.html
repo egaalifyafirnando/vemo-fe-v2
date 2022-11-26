@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="title" content="Bakul Sayur" />
+        <meta name="description" content="Online Shop" />
+        <meta name="keywords" content="Online Shop" />
+        <meta name="author" content="Ega Alifya Firnando" />
+        <title>Bakul Sayur - Toko Sayur Online Terpercaya No. 1 di Indonesia</title>
+        <link rel="shortcut icon" href="./logo.png" type="image/x-icon" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+
+            body {
+                font-family: 'Quicksand', sans-serif;
+                background: #faf8ef;
+            }
+
+            .form-control:focus {
+                color: #6e707e;
+                background-color: #fff;
+                /* warna border form */
+                border-color: #666666;
+                outline: 0;
+                box-shadow: none;
+            }
+
+            .logo {
+                color: #fff;
+                font-size: 25px;
+                font-weight: 600;
+            }
+
+            .header-main {
+                position: relative;
+                padding-top: 7px;
+                padding-bottom: 7px;
+                background-color: #900d0d;
+            }
+
+            .search-button {
+                color: #900d0d;
+                background-color: #fff;
+                border-color: #fff;
+            }
+
+            .list-group-item {
+                position: relative;
+                display: block;
+                /* padding: .75rem 1.25rem; */
+                padding: 10px;
+                background-color: #f1f1f1;
+                border: none;
+                padding-bottom: 2;
+                margin-bottom: 10px;
+                /* border-radius: 0.5rem !important; */
+            }
+            .list-group-item.active {
+                padding: 15px;
+                background-color: #cf1b1b;
+                border: #cf1b1b;
+            }
+
+            .list-form-item {
+                background-color: #f1f1f1;
+                border: none;
+            }
+
+            .list-form-item:focus {
+                background-color: #f1f1f1;
+            }
+
+            .payment {
+                padding: 10px;
+                background-repeat: no-repeat;
+                background-size: 90px auto;
+                background-position: center center;
+                background-color: white;
+                border-radius: 5px;
+                margin-right: 5px;
+                margin-left: 5px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            }
+
+            .card .ribbon {
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                width: 100px;
+                height: 100px;
+                /* background: red; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+            }
+
+            .card .ribbon:before {
+                content: 'diskon';
+                position: absolute;
+                width: 150%;
+                height: 30px;
+                background: #cf1b1b;
+                transform: rotate(-45deg) translateY(-25px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: uppercase;
+                font-weight: 600;
+                color: white;
+            }
+
+            .card .ribbon:after {
+                content: '';
+                position: absolute;
+                bottom: 14px;
+                left: 0;
+                width: 10px;
+                height: 10px;
+                background: #3a340d;
+                z-index: -1;
+                /* 
+                height ribbon: 150
+                height rear ribbon: 10
+                150 - 10 = 140
+                */
+                box-shadow: 76px -76px #3a340d;
+            }
+
+            .badge-discount {
+                background-color: #cf1b1b;
+            }
+
+            header .badge {
+                color: #900d0d;
+                background-color: #fff;
+                border-color: #fff;
+                line-height: 20px;
+                cursor: pointer;
+            }
+
+            footer {
+                background: #900d0d;
+                border-top: 8px solid #cf1b1b;
+            }
+
+            .alert {
+                padding: 0.375rem 0.75rem;
+            }
+
+            /* media query title card */
+            @media only screen and (max-width: 992px) {
+                .search-bar {
+                    width: 100% !important;
+                }
+            }
+
+            @media only screen and (min-width: 992px) {
+                .title-card {
+                    font-size: 1.3rem;
+                }
+            }
+
+            @media only screen and (min-width: 768px) {
+                .search-mini {
+                    display: none;
+                }
+            }
+
+            @media only screen and (max-width: 768px) {
+                .logo img {
+                    width: 150px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- mount view app -->
+        <div id="app"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-7PQ0Zfq-JjvKYcNC"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+            var Tawk_API = Tawk_API || {},
+                Tawk_LoadStart = new Date();
+            (function () {
+                var s1 = document.createElement('script'),
+                    s0 = document.getElementsByTagName('script')[0];
+                s1.async = true;
+                s1.src = 'https://embed.tawk.to/62a6c18a7b967b1179942cb8/1g5dm821j';
+                s1.charset = 'UTF-8';
+                s1.setAttribute('crossorigin', '*');
+                s0.parentNode.insertBefore(s1, s0);
+            })();
+        </script>
+        <!--End of Tawk.to Script-->
+    </body>
+</html>
